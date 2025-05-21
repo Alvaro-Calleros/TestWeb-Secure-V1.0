@@ -1,0 +1,431 @@
+/* Estilos base */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilos para la sección de registro */
+.register-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.register-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el panel izquierdo */
+.register-graphic {
+    display: none;
+    width: 50%;
+    padding: 48px;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .register-graphic {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.graphic-icon {
+    width: 96px;
+    height: 96px;
+    margin-bottom: 32px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.graphic-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.graphic-text {
+    text-align: center;
+    opacity: 0.9;
+    margin-bottom: 48px;
+}
+
+.benefits-container {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 24px;
+    border-radius: 8px;
+}
+
+.benefits-title {
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.benefit-icon {
+    background-color: white;
+    border-radius: 9999px;
+    padding: 8px;
+}
+
+.benefit-icon svg {
+    width: 24px;
+    height: 24px;
+    color: #4f46e5;
+}
+
+.benefit-content h4 {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.benefit-content p {
+    font-size: 0.875rem;
+    opacity: 0.8;
+}
+
+/* Estilos para el panel derecho (formulario) */
+.register-form-container {
+    width: 100%;
+    background-color: white;
+    padding: 32px;
+}
+
+@media (min-width: 768px) {
+    .register-form-container {
+        width: 50%;
+        padding: 48px;
+    }
+}
+
+.form-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    color: #4f46e5;
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #1f2937;
+}
+
+.form-title-container {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.form-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+
+.form-subtitle {
+    color: #6b7280;
+}
+
+/* Estilos para el formulario */
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+.form-input {
+    padding: 12px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+/* Estilos para la barra de fortaleza de contraseña */
+.password-strength-container {
+    margin-top: 8px;
+}
+
+.password-strength-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.password-strength-label {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.password-strength-text {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.password-strength-bg {
+    width: 100%;
+    height: 6px;
+    background-color: #e5e7eb;
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.password-strength-bar {
+    height: 100%;
+    border-radius: 9999px;
+    width: 10%;
+    transition: all 0.3s ease;
+}
+
+.password-strength-weak {
+    background-color: #ef4444;
+}
+
+.password-strength-medium {
+    background-color: #f59e0b;
+}
+
+.password-strength-strong {
+    background-color: #10b981;
+}
+
+.password-match {
+    font-size: 0.75rem;
+    margin-top: 4px;
+    visibility: hidden;
+}
+
+.password-match.visible {
+    visibility: visible;
+}
+
+.password-match.success {
+    color: #10b981;
+}
+
+.password-match.error {
+    color: #ef4444;
+}
+
+/* Estilos para el checkbox de términos */
+.terms-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.terms-checkbox {
+    margin-top: 3px;
+}
+
+.terms-label {
+    font-size: 0.875rem;
+    color: #374151;
+    margin-left: 8px;
+}
+
+.terms-link {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.terms-link:hover {
+    color: #4338ca;
+}
+
+/* Estilos para el botón de envío */
+.submit-button {
+    background-color: #4f46e5;
+    color: white;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #4338ca;
+}
+
+/* Estilos para el separador */
+.separator {
+    position: relative;
+    margin: 32px 0;
+}
+
+.separator-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #d1d5db;
+    z-index: 1;
+}
+
+.separator-text {
+    position: relative;
+    display: inline-block;
+    padding: 0 12px;
+    background-color: white;
+    color: #6b7280;
+    font-size: 0.875rem;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Estilos para los botones de redes sociales */
+.social-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.social-button:hover {
+    background-color: #f9fafb;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.google-icon {
+    fill: #4285F4;
+}
+
+.facebook-icon {
+    fill: #1877F2;
+}
+
+/* Estilos para el enlace de inicio de sesión */
+.login-link-container {
+    margin-top: 32px;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.login-link {
+    color: #4f46e5;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.login-link:hover {
+    color: #4338ca;
+}
+
+/* Estilos para el footer */
+.footer {
+    background-color: #1f2937;
+    color: white;
+    padding: 24px 0;
+    text-align: center;
+}
+
+.footer-text {
+    color: #9ca3af;
+}
+
+/* Animaciones */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}

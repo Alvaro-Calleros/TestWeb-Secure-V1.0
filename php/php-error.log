@@ -1,0 +1,2 @@
+[21-May-2025 23:34:44 Europe/Berlin] Error en login.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'last_login' in 'field list'
+[21-May-2025 23:35:00 Europe/Berlin] Error en login.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'last_login' in 'field list'

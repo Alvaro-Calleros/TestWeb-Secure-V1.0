@@ -1,0 +1,806 @@
+html {
+    scroll-behavior: smooth;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilos para el navbar */
+.navbar {
+    display: flex;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 12px 0;
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    color: #4f46e5;
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #1f2937;
+}
+
+/* Botón menú móvil */
+.mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+}
+
+.mobile-menu-button svg {
+    width: 24px;
+    height: 24px;
+    color: #1f2937;
+}
+
+/* Enlaces de navegación */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.nav-link {
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.nav-link:hover {
+    color: #6ba0f4;
+}
+
+.nav-link.active {
+    color: #298efb;
+}
+
+/* Contenedor de botones en desktop */
+.nav-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Botones */
+.login-button {
+    background-color: #298efb;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.login-button:hover {
+    background-color: #1080f8;
+}
+
+.regist-button {
+    color: rgb(0, 0, 0);
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    background-color: transparent;
+}
+
+.regist-button:hover {
+    background-color: #eceaea;
+}
+
+/* Estilos para móviles */
+@media (max-width: 1500px) {
+    .container {
+        max-width: 95%;
+        padding: 0 10px;
+    }
+
+    .mobile-menu-button {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        gap: 0;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        transform: translateY(-150%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+    }
+
+    .nav-link {
+        width: 100%;
+        text-align: center;
+        padding: 12px 0;
+    }
+
+    /* Contenedor de botones en móvil */
+    .mobile-buttons {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 15px 20px;
+        gap: 10px;
+        border-top: 1px solid #f0f0f0;
+        margin-top: 10px;
+    }
+
+    .login-button,
+    .regist-button {
+        width: 80%;
+        margin: 8px auto;
+        text-align: center;
+        display: block;
+    }
+
+    /* Ocultamos los botones originales en móvil */
+    .nav-buttons {
+        display: none;
+    }
+
+    .mobile-buttons {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 15px auto 0;
+        gap: 10px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .mobile-buttons {
+        display: none;
+    }
+
+    .nav-buttons {
+        display: flex;
+        gap: 1rem;
+    }
+}
+
+/* Ajustes adicionales para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .logo-text {
+        font-size: 1rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+}
+
+/* Estilos para la sección hero */
+.hero {
+    background: linear-gradient(to right, #6ba0f4, #298efb);
+    color: white;
+    padding: 75px 0;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+@media (min-width: 768px) {
+    .hero-container {
+        flex-direction: row;
+    }
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+.hero-description {
+    font-size: 1.25rem;
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+@media (min-width: 480px) {
+    .hero-buttons {
+        flex-direction: row;
+    }
+}
+
+.primary-button {
+    background-color: white;
+    color: #4f46e5;
+    font-weight: 1000;
+    padding: 12px 24px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.primary-button:hover {
+    background-color: #eaeaea;
+}
+
+.secondary-button {
+    border: 1px solid white;
+    color: white;
+    font-weight: 1000;
+    padding: 12px 24px;
+    border-radius: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.secondary-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.security-card {
+    position: relative;
+    background-color: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 200px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.security-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 16px;
+    color: #4f46e5;
+    display: block;
+    margin: auto;
+
+}
+
+.security-content {
+    color: #1f2937;
+    text-align: center;
+}
+
+.security-title {
+    font-weight: 500;
+}
+
+.security-subtitle {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 12px;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #e5e7eb;
+    border-radius: 9999px;
+    height: 10px;
+}
+
+.progress-bar {
+    background-color: #4f46e5;
+    height: 100%;
+    border-radius: 9999px;
+    width: 70%;
+}
+
+.verification-badge {
+    position: absolute;
+    bottom: -16px;
+    right: -16px;
+    background-color: #10b981;
+    color: white;
+    padding: 8px;
+    border-radius: 9999px;
+}
+
+.badge-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Estilos para la sección de características */
+.features {
+    padding: 64px 0;
+    background-color: white;
+}
+
+.section-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+@media (min-width: 768px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .features-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.feature-card {
+    background-color: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon-container {
+    background-color: #e0e7ff;
+    padding: 12px;
+    border-radius: 9999px;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.feature-icon {
+    width: 32px;
+    height: 32px;
+    color: #4f46e5;
+}
+
+.feature-icon-container.purple {
+    background-color: #ede9fe;
+}
+
+.feature-icon-container.purple .feature-icon {
+    color: #8b5cf6;
+}
+
+.feature-icon-container.green {
+    background-color: #d1fae5;
+}
+
+.feature-icon-container.green .feature-icon {
+    color: #10b981;
+}
+
+.feature-icon-container.red {
+    background-color: #fee2e2;
+}
+
+.feature-icon-container.red .feature-icon {
+    color: #ef4444;
+}
+
+.feature-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.feature-description {
+    color: #6b7280;
+}
+
+/* Estilos para la sección cómo funciona */
+.how-it-works {
+    padding: 64px 0;
+    background-color: #f9fafb;
+}
+
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+@media (min-width: 768px) {
+    .steps-container {
+        flex-direction: row;
+        justify-content: center;
+        gap: 48px;
+    }
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 240px;
+}
+
+.step-number {
+    background-color: #3b82f6;
+    color: white;
+    border-radius: 9999px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.step-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.step-description {
+    color: #6b7280;
+}
+
+.step-arrow {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .step-arrow {
+        display: block;
+        color: #9ca3af;
+    }
+}
+
+/* Estilos para la sección acerca del proyecto */
+.about {
+    padding: 64px 0;
+    background-color: white;
+}
+
+.about-container {
+    background: linear-gradient(to right, #f0f9ff, #eef2ff);
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+    .about-container {
+        padding: 48px;
+    }
+}
+
+.about-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.about-text {
+    color: #374151;
+    line-height: 1.6;
+}
+
+.about-text p {
+    margin-bottom: 16px;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 600;
+}
+
+.about-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+@media (min-width: 480px) {
+    .about-buttons {
+        flex-direction: row;
+    }
+}
+
+.about-primary-button {
+    background-color: #4f46e5;
+    color: white;
+    font-weight: 500;
+    padding: 12px 24px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-primary-button:hover {
+    background-color: #4338ca;
+}
+
+.about-secondary-button {
+    border: 1px solid #4f46e5;
+    color: #4f46e5;
+    font-weight: 500;
+    padding: 12px 24px;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-secondary-button:hover {
+    background-color: #f5f3ff;
+}
+
+.button-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+/* Estilos para el footer */
+.footer {
+    background-color: #1f2937;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.footer-brand {
+    margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+    .footer-brand {
+        margin-bottom: 0;
+    }
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.footer-logo-icon {
+    width: 32px;
+    height: 32px;
+    color: #60a5fa;
+}
+
+.footer-logo-text {
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.footer-description {
+    color: #9ca3af;
+    max-width: 300px;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+@media (min-width: 768px) {
+    .footer-links {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.footer-links-section h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.footer-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-link {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid #374151;
+    margin-top: 32px;
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.footer-copyright {
+    color: #9ca3af;
+    margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+    .footer-copyright {
+        margin-bottom: 0;
+    }
+}
+
+.footer-social {
+    display: flex;
+    gap: 16px;
+}
+
+.social-link {
+    color: #9ca3af;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: white;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Animaciones */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
