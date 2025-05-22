@@ -161,7 +161,7 @@ body {
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
         transform: translateY(-150%);
         transition: transform 0.3s ease-in-out;
-        z-index: 999;
+        z-index: 2000;
     }
 
     .nav-links.active {
