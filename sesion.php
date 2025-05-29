@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión - TestWeb Secure</title>
+    <title>Iniciar Sesión - BLITZ</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                         </svg>
-                        <span class="font-bold text-2xl text-gray-800">TestWeb Secure</span>
+                        <span class="font-bold text-2xl text-gray-800">BLITZ SCAN</span>
                     </a>
                 </div>
 
@@ -210,7 +210,7 @@
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-6">
         <div class="container mx-auto px-4 text-center">
-            <p class="text-gray-400">&copy; <span id="current-year">2023</span> TestWeb Secure. Todos los derechos
+            <p class="text-gray-400">&copy; <span id="current-year">2023</span> BLITZ SCAN. Todos los derechos
                 reservados.</p>
         </div>
     </footer>
