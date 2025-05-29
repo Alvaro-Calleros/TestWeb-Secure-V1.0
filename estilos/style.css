@@ -9,8 +9,11 @@
       --ultra-light-gray: #f8fafc;
       --danger: #dc2626;
       --success: #059669;
+      --footer-bg: #1f2937;
+      --footer-text: #9ca3af;
     }
 
+    /* Reset mejorado */
     .security-app * {
       margin: 0;
       padding: 0;
@@ -21,44 +24,47 @@
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       background-color: var(--white);
       color: var(--black);
-      min-height: 100vh;
-      line-height: 1.5;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
-    .security-app__container {
+    /* Contenedor principal */
+    .container {
       width: 100%;
-      max-width: 980px;
+      max-width: 85%;
       margin: 0 auto;
-      padding: 0 22px;
+      padding: 0 1.375rem;
     }
 
-    .security-app__header {
+    /* Navbar corregido */
+    .navbar {
+      display: flex;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       padding: 16px 0;
-      background-color: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
       position: sticky;
+      z-index: 1000;
       top: 0;
-      z-index: 100;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
 
-    .security-app__header-content {
+    a{
+      text-decoration: none;
+    }
+    .navbar-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      width: 100%;
     }
 
-    /* Estilos para el nuevo logo */
     .logo {
       display: flex;
       align-items: center;
       gap: 8px;
-      font-weight: 700;
-      font-size: 1.25rem;
-      color: #1f2937;
+      flex-shrink: 0;
     }
 
     .logo-icon {
@@ -69,35 +75,169 @@
 
     .logo-text {
       font-weight: 700;
+      font-size: 1.25rem;
+      color: #1f2937;
     }
 
-    .security-app__back-link {
-      color: var(--primary);
+    /* Botón menú móvil */
+    .mobile-menu-button {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 1001;
+    }
+
+    .mobile-menu-button svg {
+      width: 24px;
+      height: 24px;
+      color: #1f2937;
+    }
+
+    /* Enlaces de navegación */
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-link {
+      color: rgba(0, 0, 0, 0.8);
       text-decoration: none;
-      font-size: 14px;
       font-weight: 500;
-      transition: all 0.2s ease;
+      transition: all 0.3s ease;
+      position: relative;
+      padding: 0.5rem 0;
+      font-size: 1rem;
     }
 
-    .security-app__back-link:hover {
-      color: var(--primary-light);
+    .nav-link:hover {
+      color: #6ba0f4;
     }
 
-    .security-app__back-link::before {
-      content: "←";
-      margin-right: 6px;
+    .nav-link.active {
+      color: #298efb;
     }
 
+    /* Contenedor de botones en desktop */
+    .nav-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    /* Botones */
+    .login-button {
+      background-color: #298efb;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 20px;
+    }
+
+    .login-button:hover {
+      background-color: #1080f8;
+    }
+
+    .regist-button {
+      color: rgb(0, 0, 0);
+      padding: 8px 16px;
+      border: none;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-decoration: none;
+      display: inline-block;
+      background-color: transparent;
+      border-radius: 20px;
+    }
+
+    .regist-button:hover {
+      background-color: #eceaea;
+    }
+
+    /* Media queries optimizadas */
+    @media (max-width: 768px) {
+      .container {
+        max-width: 95%;
+        padding: 0 10px;
+      }
+
+      .mobile-menu-button {
+        display: block;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        gap: 0;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        transform: translateY(-150%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 2000;
+      }
+
+      .nav-links.active {
+        transform: translateY(0);
+      }
+
+      .nav-link {
+        width: 100%;
+        text-align: center;
+        padding: 12px 0;
+      }
+
+      /* Contenedor de botones en móvil */
+      .mobile-buttons {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 15px auto 0;
+        gap: 10px;
+      }
+
+      .login-button,
+      .regist-button {
+        width: 100%;
+        margin: 8px auto;
+        text-align: center;
+        display: block;
+      }
+
+      /* Ocultamos los botones originales en móvil */
+      .nav-buttons {
+        display: none;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .mobile-buttons {
+        display: none;
+      }
+    }
+
+    /* Hero Section */
     .security-app__hero {
       padding: 80px 0 40px;
       text-align: center;
+      background: linear-gradient(to right, #6ba0f4, #298efb);
     }
 
     .security-app__title {
       font-size: 48px;
       font-weight: 700;
       margin-bottom: 16px;
-      color: var(--black);
+      color: var(--white);
       letter-spacing: -0.5px;
       line-height: 1.1;
     }
@@ -105,7 +245,7 @@
     .security-app__subtitle {
       font-size: 21px;
       font-weight: 400;
-      color: var(--medium-gray);
+      color: var(--white);
       margin-bottom: 48px;
       max-width: 600px;
       margin-left: auto;
@@ -125,11 +265,15 @@
       vertical-align: middle;
     }
 
+    /* Main Content */
     .security-app__main-content {
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding-top: 80px;
       padding-bottom: 80px;
+      background: var(--white);
+      flex: 1;
     }
 
     .security-app__scan-form {
@@ -139,7 +283,7 @@
       background-color: var(--white);
       padding: 40px;
       border-radius: 20px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       transition: all 0.3s ease;
     }
 
@@ -225,7 +369,7 @@
       background-color: var(--primary);
       color: white;
       border: none;
-      border-radius: 12px;
+      border-radius: 20px;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       font-size: 16px;
       font-weight: 600;
@@ -258,7 +402,6 @@
         opacity: 0;
         transform: translateY(20px);
       }
-
       100% {
         opacity: 1;
         transform: translateY(0);
@@ -377,4 +520,143 @@
       .security-app__hero {
         padding: 40px 0 20px;
       }
+    }
+
+    /* Footer corregido */
+    .footer {
+      background-color: var(--footer-bg);
+      color: white;
+      width: 100%;
+      padding: 40px 0;
+      margin-top: auto;
+    }
+
+    .footer-container {
+      padding-top: 25px;
+      display: flex;
+      padding: 0 1.375rem;
+      flex-direction: column;
+    }
+
+    @media (min-width: 768px) {
+      .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    .footer-brand {
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: 768px) {
+      .footer-brand {
+        margin-bottom: 0;
+      }
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .footer-logo-icon {
+      width: 32px;
+      height: 32px;
+      color: #60a5fa;
+    }
+
+    .footer-logo-text {
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+
+    .footer-description {
+      color: var(--footer-text);
+      max-width: 300px;
+    }
+
+    .footer-links {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+
+    @media (min-width: 768px) {
+      .footer-links {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .footer-links-section h3 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .footer-links-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer-link {
+      color: var(--footer-text);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-link:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #374151;
+      margin-top: 32px;
+      padding-top: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    .footer-copyright {
+      color: var(--footer-text);
+      margin-bottom: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .footer-copyright {
+        margin-bottom: 0;
+      }
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 16px;
+    }
+
+    .social-link {
+      color: var(--footer-text);
+      transition: color 0.3s;
+    }
+
+    .social-link:hover {
+      color: white;
+    }
+
+    .social-icon {
+      width: 24px;
+      height: 24px;
     }
