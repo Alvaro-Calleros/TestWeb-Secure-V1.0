@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="estilos/estilos_index.css">
+    <link rel="stylesheet" href="estilos/nav_footer.css">
 </head>
 
 <body>
@@ -18,10 +19,7 @@
         <div class="navbar-container container">
             <!-- Logo -->
             <div class="logo">
-                <svg xmlns="http://www.w3.org/2000/svg" class="logo-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
+                <img src="imagenes/Logo.svg" alt="" class="logo-icon">
                 <span class="logo-text">BLITZ SCAN</span>
             </div>
 
@@ -166,40 +164,38 @@
                 <div class="step">
                     <div class="step-number">1</div>
                     <h3 class="step-title">Ingresa la URL</h3>
-                    <p class="step-description">Introduce la dirección del sitio web que deseas analizar en el campo de
-                        entrada.</p>
+                    <p class="step-description">Introduce la dirección del sitio web que deseas analizar en el campo de entrada.</p>
+                    <div class="step-image-container">
+                        <img src="imagenes/link_scanner.png" alt="Ingresar URL">
+                    </div>
                 </div>
 
-                <!-- Arrow -->
                 <div class="step-arrow">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
+                    <i class="fas fa-arrow-right"></i>
                 </div>
 
                 <!-- Step 2 -->
                 <div class="step">
                     <div class="step-number">2</div>
-                    <h3 class="step-title">Análisis Automático</h3>
-                    <p class="step-description">Nuestro backend realiza pruebas automatizadas para detectar
-                        vulnerabilidades comunes.</p>
+                    <h3 class="step-title">tipo de scaneo</h3>
+                    <p class="step-description">Elige el tipo de escaneo que deseas realizar según tus necesidades de seguridad.</p>
+                    <div class="step-image-container">
+                        <img src="imagenes/tipo_scanner.png" alt="Ingresar URL">
+                    </div>
                 </div>
 
-                <!-- Arrow -->
                 <div class="step-arrow">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
+                    <i class="fas fa-arrow-right"></i>
                 </div>
 
                 <!-- Step 3 -->
                 <div class="step">
                     <div class="step-number">3</div>
                     <h3 class="step-title">Informe Detallado</h3>
-                    <p class="step-description">Recibe un informe completo con las vulnerabilidades detectadas y
-                        recomendaciones.</p>
+                    <p class="step-description">Recibe un informe completo con las vulnerabilidades detectadas y recomendaciones para solucionarlas.</p>
+                                        <div class="step-image-container">
+                        <img src="imagenes/resultado_scanner.png" alt="Ingresar URL">
+                    </div>
                 </div>
             </div>
         </div>
@@ -252,11 +248,7 @@
             <div class="footer-container">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="footer-logo-icon" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                        </svg>
+                        <img src="imagenes/Logo.svg" alt=""class="footer-logo-icon">
                         <span class="footer-logo-text">BLITZ SCAN</span>
                     </div>
                     <p class="footer-description">Proyecto universitario para la detección de vulnerabilidades web

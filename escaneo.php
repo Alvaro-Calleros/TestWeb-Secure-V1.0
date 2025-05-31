@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Security Scanner</title>
+  <title>BLITZ SCAN</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="estilos/style.css">
+  <link rel="stylesheet" href="estilos/nav_footer.css">
 </head>
 
 <body class="security-app">
@@ -14,11 +15,8 @@
         <div class="navbar-container container">
             <!-- Logo -->
             <div class="logo">
-                <svg xmlns="http://www.w3.org/2000/svg" class="logo-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-                <span class="logo-text">BLIZ SCAN</span>
+                <img src="imagenes/Logo.svg" alt="" class="logo-icon">
+                <span class="logo-text">BLITZ SCAN</span>
             </div>
 
             <!-- Botón menú móvil -->
@@ -121,11 +119,7 @@
             <div class="footer-container">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="footer-logo-icon" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                        </svg>
+                        <img src="imagenes/Logo.svg" alt="" class="footer-logo-icon">
                         <span class="footer-logo-text">BLITZ SCAN</span>
                     </div>
                     <p class="footer-description">Proyecto universitario para la detección de vulnerabilidades web
