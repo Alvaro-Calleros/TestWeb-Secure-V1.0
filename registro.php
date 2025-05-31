@@ -24,7 +24,7 @@
                             d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
                     </svg>
                 </div>
-                <h3 class="graphic-title">Únete a TestWeb Secure</h3>
+                <h3 class="graphic-title">Únete a BLITZ SCAN</h3>
                 <p class="graphic-text">Crea una cuenta para acceder a todas las herramientas de detección de
                     vulnerabilidades web.</p>
 
@@ -78,10 +78,8 @@
             <div class="register-form-container">
                 <div class="form-header">
                     <a href="index.php" class="logo-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="logo-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                        </svg>
-                        <span class="logo-text">TestWeb Secure</span>
+                        <img src="imagenes/Logo.svg" alt="" class="logo-icon">
+                        <span class="logo-text">BLITZ SCAN</span>
                     </a>
                 </div>
 
@@ -195,7 +193,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p class="footer-text">&copy; <span id="current-year">2023</span> TestWeb Secure. Todos los derechos
+            <p class="footer-text">&copy; <span id="current-year">2025</span> BLITZ SCAN. Todos los derechos
                 reservados.</p>
         </div>
     </footer>
