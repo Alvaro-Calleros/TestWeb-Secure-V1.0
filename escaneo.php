@@ -159,7 +159,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p class="footer-copyright">&copy; 2025 TestWeb Secure. Todos los derechos reservados.</p>
+                <p class="footer-copyright">&copy; 2025 Blitz Scan. Todos los derechos reservados.</p>
                 <div class="footer-social">
                     <a href="#" class="social-link">
                         <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
