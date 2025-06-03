@@ -318,18 +318,6 @@
             </div>
         </div>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const name = sessionStorage.getItem('welcomeName');
-            if (name) {
-                alert(`Bienvenido ${name}!`);
-                sessionStorage.removeItem('welcomeName'); 
-            }
-        });
-    </script>
-
-
-    
     <script src="javascript/index.js"></script>
     <script src="javascript/nav_movil.js"></script>
 </body>
