@@ -189,7 +189,7 @@
             </div>
         </div>
     </footer>
-
+    
   <script src="javascript/escaner.js"></script>
   <script src="javascript/nav_movil.js"></script>
 </body>
