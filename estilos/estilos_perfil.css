@@ -1,0 +1,101 @@
+ :root {
+      --white: #ffffff;
+      --black: #1e293b;
+      --primary: #0071e3;
+      --primary-light: #40a9ff;
+      --medium-gray: #64748b;
+      --dark-gray: #334155;
+      --light-gray: #e2e8f0;
+      --ultra-light-gray: #f8fafc;
+      --danger: #dc2626;
+      --success: #059669;
+      --footer-bg: #1f2937;
+      --footer-text: #9ca3af;
+    }
+
+    .security-app {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--white);
+      color: var(--black);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 85%;
+      margin: 0 auto;
+      padding: 0 1.375rem;
+    }
+
+    /* ESTILOS PARA TABLA */
+    .table-container {
+      margin: 40px 0;
+      overflow-x: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    .scan-table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: var(--white);
+    }
+
+    .table-header {
+      background-color: var(--ultra-light-gray);
+    }
+
+    .table-header th {
+      padding: 16px 24px;
+      text-align: left;
+      font-weight: 600;
+      color: var(--dark-gray);
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .table-row {
+      border-bottom: 1px solid var(--light-gray);
+    }
+
+    .table-row:last-child {
+      border-bottom: none;
+    }
+
+    .table-cell {
+      padding: 16px 24px;
+      font-size: 15px;
+      color: var(--black);
+    }
+
+    .view-details-button {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 16px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .view-details-button:hover {
+      background-color: var(--primary-light);
+    }
+
+    .no-scans {
+      text-align: center;
+      padding: 40px;
+      color: var(--medium-gray);
+    }
+
+    .scan-history-title {
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--black);
+      margin: 40px 0 20px;
+    }
