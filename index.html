@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLITZ SCAN - Escáner de Vulnerabilidades Web y Seguridad</title>
+    <meta name="description" content="BLITZ SCAN es una herramienta avanzada para detectar vulnerabilidades web como SQL Injection, XSS, puertos inseguros y más. Protege tus sitios de prueba con análisis automáticos y reportes detallados.">
+    <meta name="keywords" content="seguridad web, escáner de vulnerabilidades, SQL Injection, XSS, análisis de puertos, seguridad informática, BLITZ SCAN, auditoría web, protección web, pruebas de seguridad">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://tusitio.com/index.html">
+    <link rel="icon" type="image/svg+xml" href="imagenes/Logo.svg">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tusitio.com/index.html">
+    <meta property="og:title" content="BLITZ SCAN - Escáner de Vulnerabilidades Web y Seguridad">
+    <meta property="og:description" content="Detecta vulnerabilidades web como SQL Injection, XSS, puertos inseguros y más. Protege tus sitios de prueba con BLITZ SCAN.">
+    <meta property="og:image" content="https://tusitio.com/imagenes/Logo.svg">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BLITZ SCAN - Escáner de Vulnerabilidades Web y Seguridad">
+    <meta name="twitter:description" content="Detecta vulnerabilidades web como SQL Injection, XSS, puertos inseguros y más. Protege tus sitios de prueba con BLITZ SCAN.">
+    <meta name="twitter:image" content="https://tusitio.com/imagenes/Logo.svg">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Preload de recursos críticos -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="estilos/estilos_index.css" as="style">
+    <link rel="preload" href="estilos/nav_footer.css" as="style">
+    
+    <!-- Fuentes y estilos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/estilos_index.css">
+    <link rel="stylesheet" href="estilos/nav_footer.css">
+    <link rel="stylesheet" href="estilos/estilos_sesion.css">
+    <link rel="stylesheet" href="estilos/modal.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="imagenes/Logo.svg" alt="Logo BLITZ SCAN" class="logo-icon" width="40" height="40">
+                    <span class="logo-text">BLITZ SCAN</span>
+                </a>
+            </div>
+
+            <!-- Botón menú móvil -->
+            <button class="mobile-menu-button" aria-label="Abrir menú de navegación">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+            <!-- Enlaces de navegación -->
+            <div class="nav-links">
+                <a href="#hero" class="nav-link active">Inicio</a>
+                <a href="#caracteristicas" class="nav-link">Características</a>
+                <a href="#funcionamiento" class="nav-link">Funcionamiento</a>
+               <!-- <a href="#suscripcion" class="nav-link">Suscripción</a> -->
+                <a href="#acerca" class="nav-link">Acerca del Proyecto</a>
+                <!-- Botones SOLO para móvil -->
+                <div class="mobile-buttons">
+                    <a href="sesion.html" class="login-button">Iniciar Sesión</a>
+                    <a href="registro.html" class="regist-button">Registrar</a>
+                </div>
+            </div>
+
+            <!-- Botones SOLO para desktop -->
+            <div class="nav-buttons">
+                <a href="sesion.html" class="login-button">Iniciar Sesión</a>
+                <a href="registro.html" class="regist-button">Registrar</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-container container">
+            <div class="hero-content">
+                <h1 class="hero-title">Detecta vulnerabilidades web con facilidad</h1>
+                <p class="hero-description">TestWeb Secure es una aplicación orientada a la detección de
+                    vulnerabilidades web básicas en sitios de prueba, desarrollada como proyecto universitario.</p>
+                <div class="hero-buttons">
+                    <a href="sesion.html"><button class="primary-button">Comenzar Ahora</button></a>
+                    <a href="escaneo.html"><button class="secondary-button">Ver Demo</button></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="security-card">
+                    <img src="imagenes/Logo.svg" alt="Logo BLITZ SCAN - Seguridad Web" class="security-icon" width="40" height="40">
+                    <div class="security-content">
+                        <div class="security-title">Análisis de Seguridad</div>
+                        <div class="security-subtitle">Escaneo en progreso...</div>
+                        <div class="progress-container">
+                            <div class="progress-bar"></div>
+                        </div>
+                    </div>
+                    <div class="verification-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="badge-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title" id="caracteristicas">Características Principales</h2>
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card">
+                    <div class="feature-icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="feature-icon" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Detección de SQL Injection</h3>
+                    <p class="feature-description">Identifica vulnerabilidades de inyección SQL básicas en formularios y
+                        parámetros de URL.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div class="feature-icon-container purple">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="feature-icon" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Análisis de Puertos Vulnerables</h3>
+                    <p class="feature-description">
+                        Examina los puertos abiertos en una IP para identificar servicios expuestos y posibles fallos de
+                        seguridad.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="feature-icon-container green">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="feature-icon" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Diagnóstico del Dominio y Encabezados HTTP</h3>
+                    <p class="feature-description">Evalúa la configuración del dominio y los encabezados HTTP,
+                        proponiendo mejoras para proteger contra ataques como clickjacking y sniffing.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card">
+                    <div class="feature-icon-container red">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="feature-icon" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Directorios Inseguros</h3>
+                    <p class="feature-description">Identifica directorios y archivos potencialmente inseguros o
+                        expuestos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+       <!-- How It Works -->
+       <section class="how-it-works" id="funcionamiento">
+        <div class="container">
+            <h2 class="section-title">¿Cómo Funciona?</h2>
+            <div class="steps-container">
+                <!-- Step 1 -->
+                <article class="step">
+                    <div class="step-number" aria-hidden="true">1</div>
+                    <h3 class="step-title">Ingresa la URL</h3>
+                    <p class="step-description">Introduce la dirección del sitio web que deseas analizar en el campo de entrada.</p>
+                    <div class="step-image-container">
+                        <img src="imagenes/link_scanner.png" alt="Interfaz para ingresar URL" loading="lazy">
+                    </div>
+                </article>
+
+                <div class="step-arrow" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="arrow-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </div>
+
+                <!-- Step 2 -->
+                <article class="step">
+                    <div class="step-number" aria-hidden="true">2</div>
+                    <h3 class="step-title">Tipo de Escaneo</h3>
+                    <p class="step-description">Elige el tipo de escaneo que deseas realizar según tus necesidades de seguridad.</p>
+                    <div class="step-image-container">
+                        <img src="imagenes/tipo_scanner.png" alt="Opciones de tipo de escaneo" loading="lazy">
+                    </div>
+                </article>
+
+                <div class="step-arrow" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="arrow-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </div>
+
+                <!-- Step 3 -->
+                <article class="step">
+                    <div class="step-number" aria-hidden="true">3</div>
+                    <h3 class="step-title">Informe Detallado</h3>
+                    <p class="step-description">Recibe un informe completo con las vulnerabilidades detectadas y recomendaciones para solucionarlas.</p>
+                    <div class="step-image-container">
+                        <img src="imagenes/resultado_scanner.png" alt="Ejemplo de informe de resultados" loading="lazy">
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para imágenes expandidas -->
+    <div class="image-modal" id="imageModal" role="dialog" aria-label="Vista ampliada de imagen">
+        <button class="close-modal" id="closeModal" aria-label="Cerrar modal">&times;</button>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="Imagen expandida">
+        </div>
+        <button class="close-bottom" id="closeModalBottom" aria-label="Cerrar modal">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+            Cerrar imagen
+        </button>
+    </div>
+
+    <!-- Project Description -->
+    <section class="about">
+        <div class="container">
+            <div class="about-container">
+                <h2 class="about-title" id="acerca">Acerca del Proyecto</h2>
+                <div class="about-text">
+                    <p><span class="gradient-text">"BLITZ SCAN"</span> es una aplicación web orientada a la
+                        detección de vulnerabilidades web básicas en sitios de prueba. La aplicación permite a los
+                        usuarios ingresar una URL y ejecutar pruebas automatizadas para detectar potenciales riesgos de
+                        seguridad, brindando un informe detallado de vulnerabilidades como SQL Injection básico, XSS
+                        reflejado, headers inseguros y directorios/archivos inseguros.</p>
+
+                    <p>El sistema se basa en la comunicación entre el frontend y el backend, donde el frontend recoge la
+                        URL del usuario y envía la solicitud al backend, el cual realiza el análisis y devuelve los
+                        resultados para ser presentados de manera estructurada en la interfaz.</p>
+
+                    <p>En el área de Backend se lleva a cabo un registro de los usuarios con accesos, y datos de los
+                        escaneos realizados por ellos guardados en una base de datos.</p>
+                </div>
+
+                <div class="about-buttons">
+                    <a href="escaneo.html"><button class="about-primary-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="button-icon" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                        Probar Aplicación
+                    </button></a>
+                    
+                    <button class="about-secondary-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="button-icon" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                        Ver Documentación
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="imagenes/Logo.svg" alt="" class="footer-logo-icon">
+                        <span class="footer-logo-text">BLITZ SCAN</span>
+                    </div>
+                    <p class="footer-description">Proyecto universitario para la detección de vulnerabilidades web
+                        básicas en sitios de prueba.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 BLITZ SCAN. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+<!-- Modal de inicio de sesión -->
+<div id="loginModal" class="modal" role="dialog" aria-label="Inicio de sesión">
+    <div class="modal-content max-w-4xl">
+        <button class="close-modal" id="closeLoginModal" aria-label="Cerrar modal">&times;</button>
+        <div class="w-full flex rounded-xl shadow-lg overflow-hidden">
+            <!-- Left Side - Form -->
+            <div class="w-full md:w-1/2 bg-white p-8 md:p-12">
+                <div class="flex justify-center mb-8">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <img src="imagenes/Logo.svg" alt="" class="h-10 w-10 text-indigo-600">
+                        <span class="font-bold text-2xl text-gray-800">BLITZ SCAN</span>
+                    </a>
+                </div>
+                <div class="mb-8 text-center">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-2">Bienvenido de nuevo</h2>
+                    <p class="text-gray-600">Inicia sesión para acceder a tu cuenta</p>
+                </div>
+                <form id="loginFormModal" class="space-y-6" method="POST">
+                    <div id="login-error-modal" class="hidden py-3 px-4 mb-4 bg-red-50 text-red-700 rounded-md text-sm"></div>
+                    <div>
+                        <label for="email-modal" class="block text-sm font-medium text-gray-700 mb-1">Correo electrónico</label>
+                        <input type="email" id="email-modal" name="email" class="form-input w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none" placeholder="tu@email.com" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-1">
+                            <label for="password-modal" class="block text-sm font-medium text-gray-700">Contraseña</label>
+                        </div>
+                        <div class="relative">
+                            <input type="password" id="password-modal" name="password" class="form-input w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none" placeholder="••••••••" required minlength="8">
+                            <button type="button" class="absolute inset-y-0 right-0 pr-3 flex items-center" onclick="togglePasswordModal()">
+                                <svg class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" id="remember-modal" name="remember" class="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500">
+                        <label for="remember-modal" class="ml-2 block text-sm text-gray-700">Mantener sesión iniciada</label>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full bg-indigo-600 text-white py-3 px-4 rounded-md hover:bg-indigo-700 transition focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" id="login-btn-modal">
+                            Iniciar Sesión
+                        </button>
+                    </div>
+                </form>
+                <div class="mt-8">
+                    <div class="relative">
+                        <div class="absolute inset-0 flex items-center">
+                            <div class="w-full border-t border-gray-300"></div>
+                        </div>
+                        <div class="relative flex justify-center text-sm">
+                            <span class="px-2 bg-white text-gray-500">O continúa con</span>
+                        </div>
+                    </div>
+                    <div class="mt-6 grid grid-cols-2 gap-3">
+                        <button type="button" class="flex justify-center items-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white hover:bg-gray-50 transition">
+                            <svg class="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="#4285F4" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
+                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05" />
+                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
+                            </svg>
+                            Google
+                        </button>
+                        <button type="button" class="flex justify-center items-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white hover:bg-gray-50 transition">
+                            <svg class="h-5 w-5 mr-2" fill="#1877F2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                            Facebook
+                        </button>
+                    </div>
+                </div>
+                <p class="mt-8 text-center text-sm text-gray-600">
+                    ¿No tienes una cuenta?
+                    <a href="#" class="font-medium text-indigo-600 hover:text-indigo-800" onclick="openRegistroModal()">Regístrate</a>
+                </p>
+            </div>
+            <!-- Right Side - Image/Graphic -->
+            <div class="hidden md:block md:w-1/2 gradient-bg p-12">
+                <div class="h-full flex flex-col justify-center items-center text-white">
+                    <div class="animate-float mb-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center">Seguridad Web a tu Alcance</h3>
+                    <p class="text-center opacity-90">Accede a herramientas avanzadas para detectar vulnerabilidades en tus sitios web de prueba.</p>
+                    <div class="mt-12 w-full bg-white bg-opacity-20 p-6 rounded-lg">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="bg-white rounded-full p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Análisis Completo</h4>
+                                <p class="text-sm opacity-80">Detecta múltiples vulnerabilidades en un solo escaneo</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="bg-white rounded-full p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Resultados Rápidos</h4>
+                                <p class="text-sm opacity-80">Obtén informes detallados en segundos</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-white rounded-full p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Historial de Escaneos</h4>
+                                <p class="text-sm opacity-80">Accede a todos tus análisis anteriores</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de registro -->
+<div id="registroModal" class="modal" role="dialog" aria-label="Registro de usuario">
+    <div class="modal-content max-w-4xl">
+        <button class="close-modal" id="closeRegistroModal" aria-label="Cerrar modal">&times;</button>
+        <div class="w-full flex rounded-xl shadow-lg overflow-hidden">
+            <!-- Left Side - Form -->
+            <div class="w-full md:w-1/2 bg-white p-8 md:p-12">
+                <div class="flex justify-center mb-8">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <img src="imagenes/Logo.svg" alt="" class="h-10 w-10 text-indigo-600">
+                        <span class="font-bold text-2xl text-gray-800">BLITZ SCAN</span>
+                    </a>
+                </div>
+                <div class="mb-8 text-center">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-2">Crear una cuenta</h2>
+                    <p class="text-gray-600">Completa el formulario para registrarte</p>
+                </div>
+                <form id="registroFormModal" class="space-y-6" method="POST">
+                    <div id="registro-error-modal" class="hidden py-3 px-4 mb-4 bg-red-50 text-red-700 rounded-md text-sm"></div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label for="firstName-modal" class="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
+                            <input type="text" id="firstName-modal" name="firstName" class="form-input w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none" placeholder="Juan" required minlength="2">
+                        </div>
+                        <div>
+                            <label for="lastName-modal" class="block text-sm font-medium text-gray-700 mb-1">Apellido</label>
+                            <input type="text" id="lastName-modal" name="lastName" class="form-input w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none" placeholder="Pérez" required minlength="2">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="email-registro-modal" class="block text-sm font-medium text-gray-700 mb-1">Correo electrónico</label>
+                        <input type="email" id="email-registro-modal" name="email" class="form-input w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none" placeholder="tu@email.com" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                    </div>
+                    <div>
+                        <label for="organization-modal" class="block text-sm font-medium text-gray-700 mb-1">Organización (opcional)</label>
+                        <input type="text" id="organization-modal" name="organization" class="form-input w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none" placeholder="Nombre de tu empresa o universidad">
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-1">
+                            <label for="password-registro-modal" class="block text-sm font-medium text-gray-700">Contraseña</label>
+                        </div>
+                        <div class="relative">
+                            <input type="password" id="password-registro-modal" name="password" class="form-input w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none" placeholder="Mínimo 8 caracteres" required minlength="8">
+                            <button type="button" class="absolute inset-y-0 right-0 pr-3 flex items-center" onclick="togglePasswordRegistroModal()">
+                                <svg class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="mt-2">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-gray-600">Seguridad de la contraseña:</span>
+                                <span id="passwordStrengthText-modal" class="text-gray-600">Débil</span>
+                            </div>
+                            <div class="mt-1 h-2 bg-gray-200 rounded-full">
+                                <div id="passwordStrength-modal" class="h-2 rounded-full bg-red-500 w-1/4"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-1">
+                            <label for="confirm-password-modal" class="block text-sm font-medium text-gray-700">Confirmar contraseña</label>
+                        </div>
+                        <div class="relative">
+                            <input type="password" id="confirm-password-modal" name="confirm_password" class="form-input w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none" placeholder="Repite tu contraseña" required minlength="8">
+                            <button type="button" class="absolute inset-y-0 right-0 pr-3 flex items-center" onclick="toggleConfirmPasswordModal()">
+                                <svg class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                </svg>
+                            </button>
+                        </div>
+                        <p id="passwordMatch-modal" class="mt-1 text-sm text-red-600 hidden">Las contraseñas deben coincidir</p>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" id="terms-modal" name="terms" class="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500" required>
+                        <label for="terms-modal" class="ml-2 block text-sm text-gray-700">
+                            Acepto los <a href="terminos.html" class="text-indigo-600 hover:text-indigo-800">Términos de servicio</a> y la 
+                            <a href="privacidad.html" class="text-indigo-600 hover:text-indigo-800">Política de privacidad</a>
+                        </label>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full bg-indigo-600 text-white py-3 px-4 rounded-md hover:bg-indigo-700 transition focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" id="registro-btn-modal">
+                            Crear cuenta
+                        </button>
+                    </div>
+                </form>
+                <div class="mt-8">
+                    <div class="relative">
+                        <div class="absolute inset-0 flex items-center">
+                            <div class="w-full border-t border-gray-300"></div>
+                        </div>
+                        <div class="relative flex justify-center text-sm">
+                            <span class="px-2 bg-white text-gray-500">O regístrate con</span>
+                        </div>
+                    </div>
+                    <div class="mt-6 grid grid-cols-2 gap-3">
+                        <button type="button" class="flex justify-center items-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white hover:bg-gray-50 transition">
+                            <svg class="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="#4285F4" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
+                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05" />
+                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
+                            </svg>
+                            Google
+                        </button>
+                        <button type="button" class="flex justify-center items-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white hover:bg-gray-50 transition">
+                            <svg class="h-5 w-5 mr-2" fill="#1877F2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                            Facebook
+                        </button>
+                    </div>
+                </div>
+                <p class="mt-8 text-center text-sm text-gray-600">
+                    ¿Ya tienes una cuenta?
+                    <a href="#" class="font-medium text-indigo-600 hover:text-indigo-800" onclick="openLoginModal()">Inicia sesión</a>
+                </p>
+            </div>
+            <!-- Right Side - Image/Graphic -->
+            <div class="hidden md:block md:w-1/2 gradient-bg p-12">
+                <div class="h-full flex flex-col justify-center items-center text-white">
+                    <div class="animate-float mb-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center">Únete a nuestra comunidad</h3>
+                    <p class="text-center opacity-90">Regístrate para acceder a todas las herramientas de seguridad web y proteger tus sitios.</p>
+                    <div class="mt-12 w-full bg-white bg-opacity-20 p-6 rounded-lg">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="bg-white rounded-full p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Guarda tu historial</h4>
+                                <p class="text-sm opacity-80">Accede a todos tus análisis anteriores</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="bg-white rounded-full p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Alertas personalizadas</h4>
+                                <p class="text-sm opacity-80">Recibe notificaciones de seguridad</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-white rounded-full p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Funciones avanzadas</h4>
+                                <p class="text-sm opacity-80">Accede a herramientas premium</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Actualizar el JavaScript -->
+<script src="javascript/modal.js"></script>
+<script src="javascript/index.js" ></script>
+<script src="javascript/nav_movil.js" ></script>
+<script src="javascript/registro.js" ></script>
+<script src="javascript/js_sesion.js" ></script>
+</body>
+
+</html> 

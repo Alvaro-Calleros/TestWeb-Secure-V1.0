@@ -1,3 +1,7 @@
+/* ========================================
+   ESTILOS PERSONALIZADOS PARA EL PERFIL DE USUARIO
+   ======================================== */
+
  :root {
       --white: #ffffff;
       --black: #1e293b;
@@ -11,15 +15,19 @@
       --success: #059669;
       --footer-bg: #1f2937;
       --footer-text: #9ca3af;
+      --nav-height: 70px;
     }
 
     .security-app {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Poppins', sans-serif;
       background-color: var(--white);
       color: var(--black);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      padding-top: var(--nav-height);
     }
 
     .container {
@@ -77,7 +85,7 @@
       border: none;
       border-radius: 8px;
       padding: 8px 16px;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-weight: 500;
       cursor: pointer;
       transition: background-color 0.2s;

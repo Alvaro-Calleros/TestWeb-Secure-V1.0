@@ -1,15 +1,3 @@
-<?php
-// escaneo.php
-session_start();
-
-// Si no hay usuario en sesión, lo redirigimos al login
-if (!isset($_SESSION['user_id'])) {
-    header('Location: session.php');
-    exit;
-}
-
-$userName = $_SESSION['user_name'];
-?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -17,7 +5,9 @@ $userName = $_SESSION['user_name'];
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BLITZ SCAN</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="estilos/style.css">
   <link rel="stylesheet" href="estilos/nav_footer.css">
 </head>
@@ -27,8 +17,10 @@ $userName = $_SESSION['user_name'];
    <div class="navbar-container container">
      <!-- Logo -->
      <div class="logo">
-       <img src="imagenes/Logo.svg" alt="" class="logo-icon">
-       <span class="logo-text">BLITZ SCAN</span>
+       <a href="index.html" class="logo-link">
+         <img src="imagenes/Logo.svg" alt="Logo BLITZ SCAN" class="logo-icon">
+         <span class="logo-text">BLITZ SCAN</span>
+       </a>
      </div>
 
      <!-- Botón menú móvil -->
@@ -41,29 +33,27 @@ $userName = $_SESSION['user_name'];
 
      <!-- Enlaces de navegación -->
      <div class="nav-links">
-       <a href="#" class="nav-link active">Scanner</a>
-       <a href="perfil.php" class="nav-link">Perfil</a>
-       <!-- Si ya está logueado, mostramos solo en móvil un enlace de “Cerrar Sesión” -->
+       <a href="home_scan.html" class="nav-link active">Scanner</a>
+       <a href="historial.html" class="nav-link">Historial</a>
+       <!--<a href="perfil.html" class="nav-link">Perfil</a>-->
        <div class="mobile-buttons">
-         <!-- Puedes tener un logout.php que destruya la sesión -->
-         <a href="logout.php" class="login-button">Cerrar Sesión</a>
+         <a href="index.html" class="login-button">Cerrar Sesión</a>
        </div>
      </div>
 
      <!-- Botones SOLO para desktop -->
      <div class="nav-buttons">
-       <!-- En lugar de “Iniciar Sesión” / “Registrar”, mostramos “Hola, {Nombre}” y “Cerrar Sesión” -->
-       <span class="nav-user"><?php echo htmlspecialchars($userName); ?>!</span>
-       <a href="index.php" class="regist-button">Cerrar Sesión</a>
+       <span class="nav-user" id="userName">Usuario</span>
+       <a href="index.html" class="login-button">Cerrar Sesión</a>
      </div>
    </div>
  </nav>
 
  <section class="security-app__hero">
    <div class="security-app__container">
-     <h1 class="security-app__title">Escáner de Seguridad<span class="security-app__version">v2.1.0</span></h1>
+     <h1 class="security-app__title">Escáner de Seguridad<span class="security-app__version">v1.2.0</span></h1>
      <p class="security-app__subtitle">
-      Hola de nuevo, <?php echo htmlspecialchars($userName); ?>!  Analiza sitios web como un Pentester profesional
+      Hola de nuevo, <span id="userNameSubtitle">Usuario</span>! Analiza sitios web como un Pentester profesional
      </p>
    </div>
  </section>
@@ -139,6 +129,7 @@ $userName = $_SESSION['user_name'];
    </div>
  </section>
 
+ <!-- Footer -->
  <footer class="footer">
    <div class="container">
      <div class="footer-container">
@@ -150,49 +141,15 @@ $userName = $_SESSION['user_name'];
          <p class="footer-description">Proyecto universitario para la detección de vulnerabilidades web
            básicas en sitios de prueba.</p>
        </div>
-
-       <div class="footer-links">
-         <div class="footer-links-section">
-           <h3>Enlaces</h3>
-           <ul class="footer-links-list">
-             <li><a href="#" class="footer-link">Inicio</a></li>
-             <li><a href="#" class="footer-link">Características</a></li>
-             <li><a href="#" class="footer-link">Documentación</a></li>
-             <li><a href="#" class="footer-link">Contacto</a></li>
-           </ul>
-         </div>
-
-         <div class="footer-links-section">
-           <h3>Recursos</h3>
-           <ul class="footer-links-list">
-             <li><a href="#" class="footer-link">Guía de Usuario</a></li>
-             <li><a href="#" class="footer-link">API</a></li>
-             <li><a href="#" class="footer-link">Ejemplos</a></li>
-             <li><a href="#" class="footer-link">Blog</a></li>
-           </ul>
-         </div>
-
-         <div class="footer-links-section">
-           <h3>Legal</h3>
-           <ul class="footer-links-list">
-             <li><a href="#" class="footer-link">Términos</a></li>
-             <li><a href="#" class="footer-link">Privacidad</a></li>
-             <li><a href="#" class="footer-link">Licencias</a></li>
-           </ul>
-         </div>
-       </div>
      </div>
-
      <div class="footer-bottom">
-       <p class="footer-copyright">&copy; 2025 Blitz Scan. Todos los derechos reservados.</p>
-       <div class="footer-social">
-         <!-- … íconos sociales … -->
-       </div>
+       <p class="footer-copyright">&copy; 2025 BLITZ SCAN. Todos los derechos reservados.</p>
      </div>
    </div>
  </footer>
  <script src="javascript/escaner.js"></script>
  <script src="javascript/nav_movil.js"></script>
+ <script src="javascript/session.js"></script>
 </body>
 
 </html>

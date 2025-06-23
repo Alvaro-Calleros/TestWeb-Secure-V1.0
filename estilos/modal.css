@@ -1,0 +1,526 @@
+/* ========================================
+   ESTILOS PARA MODALES
+   ======================================== */
+
+/* Modal para imágenes expandidas */
+.image-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+
+.image-modal.active {
+    display: flex;
+    opacity: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-modal .modal-content {
+    position: relative;
+    width: 90%;
+    height: 90vh;
+    margin: auto;
+    padding: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    animation: modalFadeIn 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-modal .modal-content img {
+    max-width: 100%;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+/* Estilos del botón de cerrar para el modal de imágenes */
+.image-modal .close-modal {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    line-height: 1;
+    transition: all 0.3s ease;
+    z-index: 1001;
+    backdrop-filter: blur(4px);
+}
+
+.image-modal .close-modal:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
+.image-modal .close-modal:active {
+    transform: scale(0.95);
+}
+
+/* Agregar texto "Cerrar" debajo del botón */
+.image-modal .close-modal::after {
+    content: 'Cerrar';
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    font-weight: normal;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-modal .close-modal:hover::after {
+    opacity: 1;
+}
+
+/* Agregar botón de cerrar en la parte inferior */
+.image-modal .close-bottom {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 10px 25px;
+    transition: all 0.3s ease;
+    z-index: 1001;
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.image-modal .close-bottom:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateX(-50%) scale(1.05);
+}
+
+.image-modal .close-bottom:active {
+    transform: translateX(-50%) scale(0.95);
+}
+
+.image-modal .close-bottom svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Estilos para el modal de inicio de sesión y registro */
+body .modal {
+    display: none !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    z-index: 1000 !important;
+    justify-content: center !important;
+    align-items: center !important;
+    backdrop-filter: blur(4px) !important;
+}
+
+body .modal[style*="display: flex"] {
+    display: flex !important;
+}
+
+body .modal-content {
+    background-color: white !important;
+    position: relative !important;
+    width: 90% !important;
+    max-width: 1200px !important;
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+    border-radius: 0.75rem !important;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+    animation: modalFadeIn 0.3s ease-out !important;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close-modal {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #6B7280;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    padding: 0.5rem;
+    line-height: 1;
+    border-radius: 0.375rem;
+    transition: all 0.2s;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-modal:hover {
+    color: #374151;
+    background-color: #F3F4F6;
+}
+
+/* Estilos para el fondo del modal */
+.gradient-bg {
+    background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+}
+
+/* Animación flotante */
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Estilos para el formulario dentro del modal */
+.modal .form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #E5E7EB;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    transition: all 0.2s;
+}
+
+.modal .form-input:focus {
+    outline: none;
+    border-color: #4F46E5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.modal button[type="submit"] {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: #4F46E5;
+    color: white;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.modal button[type="submit"]:hover {
+    background-color: #4338CA;
+}
+
+.modal button[type="submit"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.3);
+}
+
+/* Estilos responsivos para el modal */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 1rem;
+        max-height: 95vh;
+    }
+    
+    .modal-content .md\:w-1\/2 {
+        width: 100%;
+    }
+    
+    .modal-content .hidden.md\:block {
+        display: none;
+    }
+
+    .modal .p-8 {
+        padding: 1rem;
+    }
+
+    .modal .p-12 {
+        padding: 1.5rem;
+    }
+}
+
+/* Estilos para el scrollbar del modal */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: #F3F4F6;
+    border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: #D1D5DB;
+    border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: #9CA3AF;
+}
+
+/* Estilos para los botones sociales */
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid #E5E7EB;
+    border-radius: 0.375rem;
+    background-color: white;
+    color: #374151;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.social-button:hover {
+    background-color: #F9FAFB;
+}
+
+.social-button svg {
+    margin-right: 0.5rem;
+}
+
+/* Estilos para el indicador de fortaleza de contraseña */
+.password-strength-container {
+    margin-top: 0.5rem;
+}
+
+.password-strength-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+}
+
+.password-strength-bg {
+    height: 0.5rem;
+    background-color: #E5E7EB;
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.password-strength-bar {
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.password-strength-weak {
+    background-color: #EF4444;
+    width: 25%;
+}
+
+.password-strength-medium {
+    background-color: #F59E0B;
+    width: 50%;
+}
+
+.password-strength-good {
+    background-color: #3B82F6;
+    width: 75%;
+}
+
+.password-strength-strong {
+    background-color: #10B981;
+    width: 100%;
+}
+
+/* Estilos para el mensaje de coincidencia de contraseñas */
+.password-match {
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    color: #EF4444;
+}
+
+/* Estilos para los términos y condiciones */
+.terms-container {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+
+.terms-checkbox {
+    margin-top: 0.25rem;
+}
+
+.terms-label {
+    margin-left: 0.75rem;
+    font-size: 0.875rem;
+    color: #4B5563;
+}
+
+.terms-link {
+    color: #4F46E5;
+    text-decoration: none;
+}
+
+.terms-link:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para los botones de submit */
+.submit-button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: #4F46E5;
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.submit-button:hover {
+    background-color: #4338CA;
+}
+
+.submit-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.3);
+}
+
+/* Estilos para los mensajes de error */
+.error-message {
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    background-color: #FEE2E2;
+    color: #B91C1C;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+}
+
+/* Estilos para los campos de formulario */
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #D1D5DB;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #4F46E5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.form-input::placeholder {
+    color: #9CA3AF;
+}
+
+/* Estilos para las etiquetas de formulario */
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+/* Estilos para los grupos de formulario */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Estilos para las filas de formulario */
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilos para el separador */
+.separator {
+    position: relative;
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.separator::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #E5E7EB;
+}
+
+.separator-text {
+    position: relative;
+    display: inline-block;
+    padding: 0 1rem;
+    background-color: white;
+    color: #6B7280;
+    font-size: 0.875rem;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 0.5rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .social-buttons {
+        grid-template-columns: 1fr;
+    }
+} 

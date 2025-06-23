@@ -1,3 +1,13 @@
+/* ========================================
+   ESTILOS PARA LA PÁGINA DE REGISTRO DE USUARIO
+   ======================================== */
+
+/* Variables */
+:root {
+    --nav-height: 70px;
+    --footer-height: 200px;
+}
+
 /* Estilos base */
 body {
     font-family: 'Poppins', sans-serif;
@@ -5,6 +15,9 @@ body {
     padding: 0;
     background-color: #f0f4f8;
     color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
@@ -16,58 +29,59 @@ body {
 
 /* Estilos para la sección de registro */
 .register-container {
-    min-height: 100vh;
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px 20px;
+    padding: 4rem 1rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
 }
 
 .register-wrapper {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
     display: flex;
-    border-radius: 12px;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
 }
 
-/* Estilos para el panel izquierdo */
+/* Estilos para la sección gráfica */
 .register-graphic {
-    display: none;
-    width: 50%;
-    padding: 48px;
-    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    flex: 1;
+    padding: 3rem;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
     color: white;
-}
-
-@media (min-width: 768px) {
-    .register-graphic {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .graphic-icon {
-    width: 96px;
-    height: 96px;
-    margin-bottom: 32px;
-    animation: float 3s ease-in-out infinite;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 2rem;
+    color: white;
 }
 
 .graphic-title {
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: 700;
-    margin-bottom: 16px;
-    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .graphic-text {
-    text-align: center;
+    font-size: 1.1rem;
     opacity: 0.9;
-    margin-bottom: 48px;
+    margin-bottom: 3rem;
+    max-width: 400px;
 }
 
 .benefits-container {
@@ -111,18 +125,11 @@ body {
     opacity: 0.8;
 }
 
-/* Estilos para el panel derecho (formulario) */
-.register-form-container {
-    width: 100%;
-    background-color: white;
-    padding: 32px;
-}
-
-@media (min-width: 768px) {
-    .register-form-container {
-        width: 50%;
-        padding: 48px;
-    }
+/* Estilos para el formulario */
+.register-form {
+    flex: 1;
+    padding: 3rem;
+    background: white;
 }
 
 .form-header {
@@ -166,49 +173,37 @@ body {
     color: #6b7280;
 }
 
-/* Estilos para el formulario */
-.register-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
 .form-row {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-
-@media (min-width: 768px) {
-    .form-row {
-        grid-template-columns: 1fr 1fr;
-    }
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .form-group {
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 1.5rem;
 }
 
 .form-label {
-    font-size: 0.875rem;
+    display: block;
+    margin-bottom: 0.5rem;
     font-weight: 500;
     color: #374151;
-    margin-bottom: 8px;
 }
 
 .form-input {
-    padding: 12px 16px;
+    width: 100%;
+    padding: 0.75rem 1rem;
     border: 1px solid #d1d5db;
-    border-radius: 6px;
+    border-radius: 0.5rem;
     font-size: 1rem;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    transition: border-color 0.3s;
 }
 
 .form-input:focus {
     outline: none;
     border-color: #4f46e5;
-    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
 }
 
 /* Estilos para la barra de fortaleza de contraseña */
@@ -303,17 +298,18 @@ body {
     color: #4338ca;
 }
 
-/* Estilos para el botón de envío */
+/* Estilos para los botones */
 .submit-button {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
     background-color: #4f46e5;
     color: white;
-    padding: 12px 16px;
     border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-weight: 500;
+    border-radius: 0.5rem;
+    font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-top: 1rem;
 }
 
 .submit-button:hover {
@@ -323,7 +319,8 @@ body {
 /* Estilos para el separador */
 .separator {
     position: relative;
-    margin: 32px 0;
+    text-align: center;
+    margin: 2rem 0;
 }
 
 .separator-line {
@@ -332,8 +329,7 @@ body {
     left: 0;
     right: 0;
     height: 1px;
-    background-color: #d1d5db;
-    z-index: 1;
+    background-color: #e5e7eb;
 }
 
 .separator-text {
@@ -344,24 +340,23 @@ body {
     color: #6b7280;
     font-size: 0.875rem;
     z-index: 2;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
-/* Estilos para los botones de redes sociales */
+/* Estilos para los botones sociales */
 .social-buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    gap: 1rem;
+    margin-bottom: 2rem;
 }
 
 .social-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px 16px;
+    padding: 0.75rem 1rem;
     border: 1px solid #d1d5db;
-    border-radius: 6px;
+    border-radius: 0.5rem;
     background-color: white;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -374,7 +369,7 @@ body {
 .social-icon {
     width: 20px;
     height: 20px;
-    margin-right: 8px;
+    margin-right: 0.5rem;
 }
 
 .google-icon {
@@ -387,8 +382,8 @@ body {
 
 /* Estilos para el enlace de inicio de sesión */
 .login-link-container {
-    margin-top: 32px;
     text-align: center;
+    margin-top: 2rem;
     font-size: 0.875rem;
     color: #6b7280;
 }
@@ -403,16 +398,39 @@ body {
     color: #4338ca;
 }
 
-/* Estilos para el footer */
-.footer {
-    background-color: #1f2937;
-    color: white;
-    padding: 24px 0;
-    text-align: center;
+/* Media queries */
+@media (max-width: 1024px) {
+    .register-wrapper {
+        flex-direction: column;
+        max-width: 600px;
+        margin: 1rem 0;
+    }
+
+    .register-graphic {
+        padding: 2rem;
+    }
+
+    .register-form {
+        padding: 2rem;
+    }
 }
 
-.footer-text {
-    color: #9ca3af;
+@media (max-width: 768px) {
+    .register-container {
+        padding: 2rem 1rem;
+    }
+
+    .register-wrapper {
+        margin: 1rem 0;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .social-buttons {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Animaciones */

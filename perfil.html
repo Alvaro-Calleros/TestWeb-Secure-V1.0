@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario - BLITZ SCAN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="estilos/perfil.css">
+    <link rel="stylesheet" href="estilos/nav_footer.css">
+</head>
+<body class="security-app">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="imagenes/Logo.svg" alt="Logo BLITZ SCAN" class="logo-icon">
+                    <span class="logo-text">BLITZ SCAN</span>
+                </a>
+            </div>
+
+            <!-- Botón menú móvil -->
+            <button class="mobile-menu-button" aria-label="Abrir menú de navegación">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+            <!-- Enlaces de navegación -->
+            <div class="nav-links">
+                <a href="home_scan.html" class="nav-link">Scanner</a>
+                <a href="historial.html" class="nav-link">Historial</a>
+                <a href="perfil.html" class="nav-link active">Perfil</a>
+                <div class="mobile-buttons">
+                    <a href="sesion.html" class="login-button">Cerrar Sesión</a>
+                </div>
+            </div>
+
+            <!-- Botones SOLO para desktop -->
+            <div class="nav-buttons">
+                <span class="nav-user" id="userName">Usuario</span>
+                <a href="sesion.html" class="login-button">Cerrar Sesión</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Principal del Perfil -->
+    <main class="profile-section">
+        <div class="container">
+            <div class="profile-container">
+                <!-- Información del Perfil -->
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        <i class="fas fa-user-circle"></i>
+                        <button class="change-avatar-btn">
+                            <i class="fas fa-camera"></i>
+                        </button>
+                    </div>
+                    <h1 class="profile-name">Nombre del Usuario</h1>
+                    <p class="profile-email">usuario@email.com</p>
+                    <div class="profile-status">
+                        <span class="status-badge premium">Cuenta Premium</span>
+                        <span class="member-since">Miembro desde: Enero 2024</span>
+                    </div>
+                </div>
+
+                <!-- Detalles del Perfil -->
+                <div class="profile-details">
+                    <div class="profile-card">
+                        <h2>Información Personal</h2>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <label>Nombre Completo</label>
+                                <p>Nombre Apellido</p>
+                            </div>
+                            <div class="info-item">
+                                <label>Nombre de Usuario</label>
+                                <p>@usuario</p>
+                            </div>
+                            <div class="info-item">
+                                <label>Email</label>
+                                <p>usuario@email.com</p>
+                            </div>
+                            <div class="info-item">
+                                <label>Teléfono</label>
+                                <p>+123 456 7890</p>
+                            </div>
+                        </div>
+                        <button class="edit-button">
+                            <i class="fas fa-edit"></i> Editar Información
+                        </button>
+                    </div>
+
+                    <!-- Nueva sección de Escaneo Avanzado -->
+                    <div class="scan-section">
+                        <div class="scan-container">
+                            <div class="scan-content">
+                                <div class="scan-text">
+                                    <h2 class="scan-title">Escaneo Avanzado</h2>
+                                    <p class="scan-description">Accede a nuestras herramientas profesionales de escaneo de seguridad para un análisis más profundo y detallado de tus sitios web.</p>
+                                    <div class="scan-buttons">
+                                        <a href="home_scan.html" class="scan-primary-button">
+                                            <i class="fas fa-shield-alt"></i> Ir a Escaneo Avanzado
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="scan-image">
+                                    <div class="scan-card">
+                                        <div class="scan-card-icon">
+                                            <i class="fas fa-lock"></i>
+                                        </div>
+                                        <div class="scan-card-content">
+                                            <h3>Escaneo Profesional</h3>
+                                            <p>Herramientas avanzadas de seguridad</p>
+                                            <div class="scan-progress">
+                                                <div class="scan-progress-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="imagenes/Logo.svg" alt="Logo BLITZ SCAN" class="footer-logo-icon">
+                        <span class="footer-logo-text">BLITZ SCAN</span>
+                    </div>
+                    <p class="footer-description">Proyecto universitario para la detección de vulnerabilidades web
+                        básicas en sitios de prueba.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 BLITZ SCAN. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="javascript/perfil.js"></script>
+    <script src="javascript/nav_movil.js"></script>
+    <script src="javascript/session.js"></script>
+</body>
+</html> 

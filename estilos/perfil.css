@@ -1,0 +1,397 @@
+/* ========================================
+   ESTILOS PARA LA PÁGINA DE PERFIL DE USUARIO
+   ======================================== */
+
+/* Variables globales */
+:root {
+    --primary-color: #4f46e5;
+    --primary-gradient: linear-gradient(to right, #6ba0f4, #298efb);
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --background-light: #f0f4f8;
+    --background-white: #ffffff;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 15px 35px rgba(0, 0, 0, 0.15);
+    --border-radius-sm: 8px;
+    --border-radius-md: 16px;
+    --border-radius-lg: 20px;
+    --transition-default: all 0.3s ease;
+}
+
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Sección de Perfil */
+.profile-section {
+    padding: 3rem 0;
+    margin-top: var(--nav-height);
+}
+
+.profile-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Encabezado del Perfil */
+.profile-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: var(--background-white);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+.profile-avatar {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+}
+
+.profile-avatar i {
+    font-size: 120px;
+    color: var(--primary-color);
+}
+
+.change-avatar-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition-default);
+}
+
+.change-avatar-btn:hover {
+    background-color: #4338ca;
+}
+
+.profile-name {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.profile-email {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.profile-status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.status-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.status-badge.premium {
+    background: linear-gradient(to right, #f59e0b, #d97706);
+    color: white;
+}
+
+.member-since {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+/* Detalles del Perfil */
+.profile-details {
+    display: grid;
+    gap: 2rem;
+}
+
+.profile-card {
+    background: var(--background-white);
+    border-radius: var(--border-radius-md);
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+}
+
+.profile-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+/* Grid de Información */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-item label {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-item p {
+    font-weight: 500;
+}
+
+/* Botón de Editar */
+.edit-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius-lg);
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 auto;
+    transition: var(--transition-default);
+}
+
+.edit-button:hover {
+    background-color: #4338ca;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .profile-header {
+        padding: 1.5rem;
+    }
+
+    .profile-avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-avatar i {
+        font-size: 100px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-name {
+        font-size: 1.5rem;
+    }
+
+    .profile-status {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .profile-name {
+        font-size: 1.25rem;
+    }
+
+    .profile-card {
+        padding: 1.5rem;
+    }
+
+    .profile-card h2 {
+        font-size: 1.25rem;
+    }
+}
+
+/* Estilos para la sección de Escaneo Avanzado */
+.scan-section {
+    margin-top: 2rem;
+    background: linear-gradient(to right, #6ba0f4, #298efb);
+    border-radius: var(--border-radius-md);
+    padding: 2rem;
+    color: white;
+}
+
+.scan-container {
+    width: 100%;
+}
+
+.scan-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .scan-content {
+        flex-direction: row;
+    }
+}
+
+.scan-text {
+    flex: 1;
+}
+
+.scan-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.scan-description {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.scan-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.scan-primary-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: white;
+    color: #298efb;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius-lg);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.scan-primary-button:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.scan-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scan-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-md);
+    width: 100%;
+    max-width: 280px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.scan-card-icon {
+    width: 56px;
+    height: 56px;
+    color: #298efb;
+    display: block;
+    margin: 0 auto 1rem;
+    background: rgba(41, 142, 251, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scan-card-icon i {
+    font-size: 1.5rem;
+}
+
+.scan-card-content {
+    text-align: center;
+    color: #1f2937;
+}
+
+.scan-card-content h3 {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.scan-card-content p {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 1rem;
+}
+
+.scan-progress {
+    width: 100%;
+    background-color: #e5e7eb;
+    border-radius: 9999px;
+    height: 8px;
+    overflow: hidden;
+}
+
+.scan-progress-bar {
+    background-color: #298efb;
+    height: 100%;
+    border-radius: 9999px;
+    width: 70%;
+    transition: width 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .scan-section {
+        padding: 1.5rem;
+    }
+
+    .scan-title {
+        font-size: 2rem;
+    }
+
+    .scan-description {
+        font-size: 1rem;
+    }
+
+    .scan-card {
+        max-width: 240px;
+    }
+}
+
+@media (max-width: 480px) {
+    .scan-section {
+        padding: 1rem;
+    }
+
+    .scan-title {
+        font-size: 1.75rem;
+    }
+
+    .scan-card {
+        padding: 1rem;
+    }
+} 
