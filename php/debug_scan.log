@@ -1,0 +1,24 @@
+SCAN.PHP ejecutado
+Raw recibido: {"scanType":"fuzz","targetUrl":"https://www.tailopez.com","payloadsUsed":[]}
+JSON parseado: Array
+(
+    [scanType] => fuzz
+    [targetUrl] => https://www.tailopez.com
+    [payloadsUsed] => Array
+        (
+        )
+
+)
+
+SCAN.PHP ejecutado
+Raw recibido: {"scanType":"fuzz","targetUrl":"https://www.tailopez.com","payloadsUsed":[]}
+JSON parseado: Array
+(
+    [scanType] => fuzz
+    [targetUrl] => https://www.tailopez.com
+    [payloadsUsed] => Array
+        (
+        )
+
+)
+

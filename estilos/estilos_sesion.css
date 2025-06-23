@@ -1,10 +1,38 @@
+/* ========================================
+   ESTILOS PARA LA PÁGINA DE INICIO DE SESIÓN
+   ======================================== */
+
+/* Variables */
+:root {
+    --nav-height: 70px;
+    --footer-height: 200px;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f0f4f8;
 }
 
 .login-container {
-    min-height: 100vh;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+}
+
+.login-wrapper {
+    width: 100%;
+    max-width: 4xl;
+    display: flex;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
 }
 
 .form-input:focus {

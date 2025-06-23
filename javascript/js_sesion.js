@@ -1,10 +1,12 @@
-document.getElementById('current-year').textContent = new Date().getFullYear();
+// js_sesion.js
 
+// Poner el año actual en el footer
+document.getElementById('current-year').textContent = new Date().getFullYear();
 
 document.getElementById('loginForm').addEventListener('submit', async function (e) {
     e.preventDefault();
 
-    const submitBtn = document.querySelector('#loginForm button[type="submit"]');
+    const submitBtn = document.querySelector('#login-btn');
     const originalBtnText = submitBtn.innerHTML;
     submitBtn.innerHTML = '<span class="loader"></span> Autenticando...';
     submitBtn.disabled = true;
@@ -17,16 +19,18 @@ document.getElementById('loginForm').addEventListener('submit', async function (
     try {
         const response = await fetch('php/login.php', {
             method: 'POST',
-            headers: {'Content-Type': 'application/json'},
+            credentials: 'same-origin',
+            headers: {
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify(formData)
         });
 
         const text = await response.text();
-
         let data;
         try {
             data = JSON.parse(text);
-        } catch (e) {
+        } catch (err) {
             throw new Error('Respuesta inválida del servidor: ' + text);
         }
 
@@ -40,12 +44,12 @@ document.getElementById('loginForm').addEventListener('submit', async function (
             sessionStorage.setItem('welcomeName', 'Usuario');
         }
 
-        window.location.href = data.redirect;
+        sessionStorage.setItem('userId', data.user_id); // <-- AQUI SE GUARDA EL ID DEL USUARIO
 
+        window.location.href = data.redirect;
 
     } catch (error) {
         console.error('Error:', error);
-
         const errorElement = document.getElementById('login-error');
         if (errorElement) {
             errorElement.textContent = error.message;
@@ -53,30 +57,17 @@ document.getElementById('loginForm').addEventListener('submit', async function (
         } else {
             alert(error.message);
         }
-
         submitBtn.innerHTML = originalBtnText;
         submitBtn.disabled = false;
     }
 });
 
+// Validación de email al perder el foco
 document.getElementById('email').addEventListener('blur', function () {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(this.value)) {
         this.setCustomValidity('Por favor ingresa un email válido');
     } else {
         this.setCustomValidity('');
-    }
-});
-
-document.querySelector('.toggle-password').addEventListener('click', function () {
-    const passwordInput = document.getElementById('password');
-    const icon = this.querySelector('i');
-
-    if (passwordInput.type === 'password') {
-        passwordInput.type = 'text';
-        icon.classList.replace('fa-eye', 'fa-eye-slash');
-    } else {
-        passwordInput.type = 'password';
-        icon.classList.replace('fa-eye-slash', 'fa-eye');
     }
 });

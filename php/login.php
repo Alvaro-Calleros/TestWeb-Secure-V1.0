@@ -1,10 +1,13 @@
 <?php
-require 'config.php';
+// login.php
+
+require 'config.php'; // Aquí debe estar tu conexión PDO llamada $pdo
 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
+// Ocultamos errores a pantalla y los mandamos a log
 ini_set('display_errors', 0);
 ini_set('log_errors', 1);
 ini_set('error_log', __DIR__ . '/php-error.log');
@@ -19,7 +22,6 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 $data = json_decode(file_get_contents('php://input'), true);
-
 if ($data === null) {
     http_response_code(400);
     echo json_encode(['error' => 'JSON inválido o no recibido']);
@@ -35,7 +37,7 @@ if (empty($data['email']) || empty($data['password'])) {
 try {
     $stmt = $pdo->prepare("SELECT * FROM usuarios WHERE email = ?");
     $stmt->execute([$data['email']]);
-    $user = $stmt->fetch();
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if (!$user || !password_verify($data['password'], $user['password'])) {
         http_response_code(401);
@@ -49,19 +51,19 @@ try {
         exit;
     }
 
+    // Regeneramos ID y guardamos datos en $_SESSION
     session_regenerate_id(true);
     $_SESSION['user_id'] = $user['id'];
     $_SESSION['user_email'] = $user['email'];
+    $_SESSION['user_name'] = $user['first_name'] . ' ' . $user['last_name'];
     $_SESSION['user_role'] = $user['role'];
     $_SESSION['last_login'] = time();
 
-    //$stmt = $pdo->prepare("UPDATE usuarios SET last_login = NOW() WHERE id = ?");
-    //$stmt->execute([$user['id']]);
-
     echo json_encode([
-        'success' => true,
-        'redirect' =>  'index.php',
-        'name' => $user['first_name'] . ' ' . $user['last_name'],
+        'success'  => true,
+        'redirect' => 'home_scan.php',
+        'user_id'  => $user['id'], // <-- Se envía el user_id para guardarlo en sessionStorage
+        'name'     => $_SESSION['user_name']
     ]);
     exit;
 
@@ -71,4 +73,3 @@ try {
     echo json_encode(['error' => 'Error interno del servidor']);
     exit;
 }
-?>
